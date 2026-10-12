@@ -116,7 +116,7 @@ def chain_branching():
     results = branching_chain.invoke({"question": "Is today rainy?"})
     print(f"Branching Result: {results}")
 
-def demo_debbuging():
+def demo_debugging():
     prompt = ChatPromptTemplate.from_template("Say hello to {name}")
     chain = prompt | model | StrOutputParser()
 
@@ -150,9 +150,12 @@ def demo_debbuging():
     print(f"Greeting: {result}")
 
 
+demo_debbuging = demo_debugging
+
+
 if __name__ == "__main__":
-    # basic_chain()
+    basic_chain()
     # parallel_chain()
     # passthrough_chain()
     # chain_branching()
-    demo_debbuging()
+    # demo_debugging()
